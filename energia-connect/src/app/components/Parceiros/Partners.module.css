@@ -1,12 +1,51 @@
 .partners {
-    text-align: center;
-    padding: 50px;
-    background: #f5f5f5;
-  }
-  
-  .logos {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-  
+  background-color: #f2f2f2; /* Tom puxado para o cinza */
+  padding: 50px 10%;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.link {
+  margin-bottom: 40px;
+}
+
+.highlight {
+  color: #ffb400;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.highlight:hover {
+  color: #cc8e00;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Espaço menor entre os logos */
+  flex-wrap: wrap;
+}
+
+.logoContainer img {
+  max-width: 150px; /* Aumenta o tamanho das logos */
+  height: auto;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.logoContainer img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}

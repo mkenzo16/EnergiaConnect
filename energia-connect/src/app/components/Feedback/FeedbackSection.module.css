@@ -1,39 +1,38 @@
 .feedbackSection {
-    position: relative;
-    background-image: url('/background.avif'); 
-    background-size: cover;
-    background-position: center;
-    padding: 50px 10%;
-  }
-  
-  .overlay {
-    background: rgba(0, 0, 0, 0.7); 
-    padding: 50px;
-    border-radius: 10px;
-  }
-  
-  .feedbackGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    color: #fff;
-  }
-  
-  .feedbackCard {
-    background: rgba(255, 255, 255, 0.1); 
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-  }
-  
-  .feedbackCard h3 {
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-  }
-  
-  .feedbackCard p {
-    font-size: 2rem;
-    font-weight: bold;
-  }
-  
+  position: relative;
+  background-image: url('/fundo-amarelo.avif');
+  background-size: cover;
+  background-position: center;
+  padding: 30px 5%;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.feedbackGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Quatro colunas */
+  gap: 15px;
+  color: #fff;
+}
+
+.feedbackCard {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.feedbackCard h3 {
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+
+.feedbackCard p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}

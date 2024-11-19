@@ -3,6 +3,8 @@ import Hero from '../app/components/Conteudo/Hero';
 import About from '../app/components/About/About';
 import Partners from '../app/components/Parceiros/Partners';
 import Footer from '../app/components/Rodape/Footer';
+import FeedbackSection from './components/Feedback/FeedbackSection';
+import Grafico from './components/Grafico/Grafico';
 
 export default function HomePage() {
   return (
@@ -11,6 +13,8 @@ export default function HomePage() {
       <main>
         <Hero />
         <About />
+        <FeedbackSection />
+        <Grafico />
         <Partners />
       </main>
       <Footer />

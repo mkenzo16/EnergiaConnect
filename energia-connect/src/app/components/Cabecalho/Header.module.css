@@ -2,41 +2,84 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 30px;
-  background: #1a1a2e;
-  color: white;
+  padding: 15px 30px;
+  background-color: #1a1a2e;
 }
 
-.logoImage {
-  height: 95px;
+.logo img {
+  height: 70px;
 }
 
 .navLinks {
-  list-style: none;
   display: flex;
+  list-style: none;
   gap: 20px;
 }
 
-.navLink {
-  color: white;
+.navLinks li a {
   text-decoration: none;
-  transition: color 0.3s;
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.navLink:hover {
-  color: #ffc107;
+.navLinks li a:hover {
+  color: #FFC107; 
+  transform: scale(1.1); 
 }
 
 .contactButton {
-  padding: 10px 20px;
-  background: #FFC107;
-  color: white;
+  background-color: #FFC107;
+  color: black;
+  padding: 8px 15px;
   border-radius: 5px;
   text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.contactButton:hover {
-  background: #ffb000;
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 0 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.searchInput {
+  padding: 8px;
+  border: none;
+  outline: none;
+  width: 200px;
+  font-size: 14px;
+}
+
+.userIconContainer {
+  display: flex;
+  align-items: center;
+}
+
+.userIcon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.userIcon img {
+  height: 50px;
+  filter: invert(100%); 
+}
+
+.userIcon:hover {
+  transform: rotate(15deg) scale(1.2); 
+  opacity: 0.9; 
+}
+
+

@@ -1,0 +1,70 @@
+.container {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.integrantesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 1.5rem;
+    text-align: left;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.foto {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.info h2 {
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.info p {
+    margin: 0.3rem 0;
+    color: #555;
+}
+
+.github {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.github:hover {
+    color: #0056b3;
+}
+
+.githubIcon {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5rem;
+}

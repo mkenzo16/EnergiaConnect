@@ -24,7 +24,7 @@ const Footer = () => {
         </p>
       </div>
       <div className={styles.logo}>
-        <img src="/your-logo.svg" alt="Your Logo" />
+        <img src="/logo.png" alt="Logo" />
       </div>
       <p className={styles.copyright}>
         Copyright © EnergiaConnect

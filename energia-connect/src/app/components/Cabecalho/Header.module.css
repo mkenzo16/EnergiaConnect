@@ -1,33 +1,42 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    background: #1a1a2e;
-    color: white;
-  }
-  
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .navLinks {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .navLinks li a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .contactButton {
-    padding: 10px 20px;
-    background: #FFC107;
-    color: black;
-    border-radius: 5px;
-    text-decoration: none;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 30px;
+  background: #1a1a2e;
+  color: white;
+}
+
+.logoImage {
+  height: 95px;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navLink {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navLink:hover {
+  color: #ffc107;
+}
+
+.contactButton {
+  padding: 10px 20px;
+  background: #FFC107;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.contactButton:hover {
+  background: #ffb000;
+}

@@ -10,7 +10,6 @@ const Hero = () => {
         <p>
           Nossa missão é fornecer a melhor experiência aos clientes. Guias e documentação abrangente, comunidade ativa e suporte 24/7 tornam o trabalho conosco um prazer.
         </p>
-        {/* Link para a página de contato */}
         <Link href="/contato">
           <button className={styles.button}>Entre em contato</button>
         </Link>

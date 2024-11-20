@@ -1,5 +1,5 @@
 .partners {
-  background-color: #f2f2f2; /* Tom puxado para o cinza */
+  background-color: #f2f2f2; 
   padding: 50px 10%;
   text-align: center;
 }
@@ -34,12 +34,12 @@
 .logoContainer {
   display: flex;
   justify-content: center;
-  gap: 15px; /* Espaço menor entre os logos */
+  gap: 15px; 
   flex-wrap: wrap;
 }
 
 .logoContainer img {
-  max-width: 150px; /* Aumenta o tamanho das logos */
+  max-width: 150px; 
   height: auto;
   filter: grayscale(100%);
   transition: filter 0.3s ease, transform 0.3s ease;

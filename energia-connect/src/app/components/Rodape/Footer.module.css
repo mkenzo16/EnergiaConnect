@@ -1,9 +1,9 @@
 .footer {
-  background-color: #1a1a2e; /* Mantém a cor de fundo */
+  background-color: #1a1a2e; 
   color: #fff;
   text-align: center;
   padding: 20px;
-  font-family: 'Arial', sans-serif; /* Adiciona uma fonte padrão moderna */
+  font-family: 'Arial', sans-serif; 
 }
 
 .socialMedia {
@@ -17,19 +17,19 @@
   width: 30px;
   height: 30px;
   transition: transform 0.3s, filter 0.3s;
-  filter: brightness(1); /* Mantém os ícones claros */
+  filter: brightness(1); 
 }
 
 .socialMedia img:hover {
   transform: scale(1.2);
-  filter: brightness(1.5); /* Aumenta o brilho ao passar o mouse */
+  filter: brightness(1.5); 
 }
 
 .info {
   margin-bottom: 20px;
   line-height: 1.5;
-  font-size: 1rem; /* Aumenta o tamanho da fonte */
-  color: #ffb400; /* Amarelo para o texto das informações */
+  font-size: 1rem; 
+  color: #ffb400; 
 }
 
 .logo img {
@@ -38,6 +38,6 @@
 }
 
 .copyright {
-  font-size: 0.9rem; /* Ajusta o tamanho da fonte para melhor legibilidade */
+  font-size: 0.9rem; 
   color: #bbb;
 }

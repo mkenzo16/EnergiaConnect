@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link'; // Importando o Link para roteamento interno
+import Link from 'next/link'; 
 import styles from './Header.module.css';
 
 const Header = () => {

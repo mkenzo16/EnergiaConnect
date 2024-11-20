@@ -1,6 +1,16 @@
 import React from 'react';
 import Login from '../components/Login/Login';
+import Header from '../components/Cabecalho/Header';
+import Footer from '../components/Rodape/Footer';
 
-export default function LoginPage() {
-  return <Login />;
-}
+const LoginPage = () => {
+  return (
+    <>
+      <Header />
+      <Login />
+      <Footer />
+    </>
+  );
+};
+
+export default LoginPage;

@@ -1,0 +1,91 @@
+.dashboard {
+    padding: 20px;
+    background-color: #f4f4f9;
+    color: #333;
+    font-family: Arial, sans-serif;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .header h1 {
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  .metrics {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  
+  .metricCard {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
+  }
+  
+  .metricCard h2 {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .metricCard p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .charts {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .chart {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin: 0 10px;
+  }
+  
+  .chart h3 {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .notifications {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+  }
+  
+  .notifications h3 {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .notifications ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .notifications li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    color: #333;
+  }
+  
+  .notifications li:last-child {
+    border-bottom: none;
+  }
+  

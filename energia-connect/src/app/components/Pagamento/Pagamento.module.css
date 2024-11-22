@@ -172,12 +172,12 @@
     }
 
     .resumo, .metodo, .cartao, .parcelas {
-        width: 90%;
+        width: 90%; 
     }
 
     .botaoConfirmar {
         width: 90%;
-    }
+    } 
 }
 
   

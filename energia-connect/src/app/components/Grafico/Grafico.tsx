@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Grafico.module.css';
+import Link from 'next/link';
 
 const Grafico = () => {
   return (
@@ -13,9 +14,11 @@ const Grafico = () => {
             a energia solar se tornou uma opção cada vez mais viável e econômica.
           </p>
           <p>
-            Comece com o cliente – descubra suas necessidades e ofereça a solução ideal.
+            Conheça já nossos serviços.
           </p>
-          <button className={styles.button}>Saiba mais</button>
+          <Link href="/servicos">
+            <button className={styles.button}>Saiba mais</button>
+          </Link>
         </div>
         <div className={styles.imageContainer}>
           <img src="/laptop.svg" alt="Gráfico de desempenho em laptop" />
@@ -26,3 +29,4 @@ const Grafico = () => {
 };
 
 export default Grafico;
+

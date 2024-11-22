@@ -6,14 +6,13 @@ const Hero = () => {
   return (
     <section id="hero" className={styles.hero}>
       <div className={styles.text}>
-        <h1>Fazendo a diferença.</h1>
+        <h1>Acompanhe seu consumo de energia.</h1>
         <p>
-          Nossa missão é fornecer a melhor experiência aos clientes. Guias e
-          documentação abrangente, comunidade ativa e suporte 24/7 tornam o trabalho conosco um prazer.
+        Veja como sua escolha pela energia solar está fazendo a diferença! Analise seus dados, descubra quantos kWh você já utilizou e o impacto positivo no seu orçamento e no meio ambiente.
         </p>
         <div className={styles.buttons}>
           <Link href="/login">
-            <button className={styles.button}>Faça seu Login</button>
+            <button className={styles.button}>Visualizar meu consumo</button>
           </Link>
           <p className={styles.signupText}>
             Não tem cadastro?{' '}

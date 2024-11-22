@@ -24,8 +24,8 @@
 }
 
 .navLinks li a:hover {
-  color: #FFC107; 
-  transform: scale(1.1); 
+  color: #FFC107;
+  transform: scale(1.1);
 }
 
 .contactButton {
@@ -74,12 +74,91 @@
 
 .userIcon img {
   height: 50px;
-  filter: invert(100%); 
+  filter: invert(100%);
 }
 
 .userIcon:hover {
-  transform: rotate(15deg) scale(1.2); 
-  opacity: 0.9; 
+  transform: rotate(15deg) scale(1.2);
+  opacity: 0.9;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .navLinks {
+    gap: 15px;
+  }
+
+  .navLinks li a {
+    font-size: 14px;
+  }
+
+  .searchInput {
+    width: 150px;
+  }
+
+  .logo img {
+    height: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navLinks {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .actions {
+    margin-top: 10px;
+  }
+
+  .searchInput {
+    width: 120px;
+  }
+
+  .logo img {
+    height: 50px;
+  }
+
+  .contactButton {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navLinks {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .searchContainer {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .searchInput {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .contactButton {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  .userIcon img {
+    height: 40px;
+  }
 }
 
 

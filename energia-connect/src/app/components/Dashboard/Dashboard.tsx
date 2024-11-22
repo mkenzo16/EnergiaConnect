@@ -7,12 +7,15 @@ const Dashboard = () => {
   return (
     <div className={styles.dashboard}>
       <header className={styles.header}>
+        <a href="/" className={styles.homeIcon}>
+          <img src="/home-icons.png" alt="Voltar ao menu principal" />
+        </a>
         <h1>Bem-vindo ao seu Painel</h1>
       </header>
       <div className={styles.metrics}>
         <div className={styles.metricCard}>
           <h2>Consumo Atual</h2>
-          <p>123 kWh</p>
+          <p>123 <span>kWh</span></p>
         </div>
         <div className={styles.metricCard}>
           <h2>Economia Mensal</h2>
@@ -20,17 +23,17 @@ const Dashboard = () => {
         </div>
         <div className={styles.metricCard}>
           <h2>Geração Total</h2>
-          <p>500 kWh</p>
+          <p>500 <span>kWh</span></p>
         </div>
       </div>
       <div className={styles.charts}>
         <div className={styles.chart}>
           <h3>Histórico de Consumo</h3>
-          {/* Insira aqui um gráfico usando Chart.js ou Recharts */}
+          {/* Adicione aqui um gráfico, ex: Chart.js ou Recharts */}
         </div>
         <div className={styles.chart}>
           <h3>Economia Acumulada</h3>
-          {/* Insira aqui um gráfico usando Chart.js ou Recharts */}
+          {/* Adicione aqui um gráfico, ex: Chart.js ou Recharts */}
         </div>
       </div>
       <div className={styles.notifications}>
@@ -45,3 +48,5 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+
+

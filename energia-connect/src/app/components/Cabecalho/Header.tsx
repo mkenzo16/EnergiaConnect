@@ -14,7 +14,7 @@ const Header = () => {
         <ul className={styles.navLinks}>
           <li><Link href="/">Início</Link></li>
           <li><Link href="/servicos">Serviços</Link></li>
-          <li><Link href="/#pricing">Preços</Link></li>
+          <li><Link href="/planos">Preços</Link></li>
           <li><Link href="/sobre">Sobre nós</Link></li>
           <li><Link href="/contato" className={styles.contactButton}>Entre em contato</Link></li>
         </ul>

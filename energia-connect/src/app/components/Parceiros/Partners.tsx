@@ -6,7 +6,7 @@ const PartnersSection = () => {
     <section className={styles.partners}>
       <h2 className={styles.title}>Parceiros e referências</h2>
       <p className={styles.subtitle}>
-        Use essa seção para aumentar a credibilidade da sua empresa de energia solar.
+        Conheça nossos parceiros e alguns de nossos projetos.
       </p>
       <p className={styles.link}>
         <a href="#projetos" className={styles.highlight}>

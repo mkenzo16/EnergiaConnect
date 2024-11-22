@@ -24,7 +24,7 @@ const GerarContratoAquisicao = () => {
     };
 
     try {
-      const response = await fetch("http://localhost:9090/api/contratos-aquisicao", {
+      const response = await fetch("http://localhost:8088/api/contratos-aquisicao", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(contrato),

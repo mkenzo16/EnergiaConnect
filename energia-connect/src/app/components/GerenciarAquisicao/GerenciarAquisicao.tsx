@@ -15,7 +15,7 @@ const GerenciarContratoAquisicao = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:9090/api/contratos-aquisicao/${id}/${senha}`
+        `http://localhost:8088/api/contratos-aquisicao/${id}/${senha}`
       );
 
       if (response.ok) {

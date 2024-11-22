@@ -22,20 +22,23 @@ const GerarContrato = () => {
     };
 
     try {
-      const response = await fetch("http://localhost:9090/api/contratos", {
+      const response = await fetch("http://localhost:8088/api/contratos", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(contrato),
       });
 
       if (response.ok) {
-        alert("Contrato gerado com sucesso!");
+        const data = await response.json();
+        alert(`Contrato gerado com sucesso! ID: ${data.id}`);
         setNome("");
         setId("");
         setSenha("");
         setTipoContrato("Plano Essencial");
         setStatus("Ativo");
       } else {
+        const errorMsg = await response.text();
+        console.error("Erro ao gerar contrato:", errorMsg);
         alert("Erro ao gerar contrato. Verifique os dados e tente novamente.");
       }
     } catch (error) {
@@ -144,5 +147,6 @@ const GerarContrato = () => {
 };
 
 export default GerarContrato;
+
 
 

@@ -64,7 +64,7 @@ const Cadastro = () => {
     };
   
     try {
-      const response = await fetch("http://localhost:9090/api/usuarios", {
+      const response = await fetch("http://localhost:8088/api/usuarios", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

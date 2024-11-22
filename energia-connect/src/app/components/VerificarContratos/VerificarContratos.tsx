@@ -9,7 +9,7 @@ const VerificarContratos = () => {
         <p className={styles.subtitle}>
           Acompanhe seus planos de energia renovável e veja todos os detalhes sobre suas aquisições ou contratos ativos.
         </p>
-        <a href="/contratos" className={styles.button}>
+        <a href="/menuContratos" className={styles.button}>
           Ver Contratos
         </a>
       </div>

@@ -33,6 +33,12 @@ const GerenciarContratoAquisicao = () => {
 
   return (
     <div className={styles.container}>
+      <div className={styles.homeIcon}>
+    <a href="/">
+        <img src="/home-icons.png" alt="Home" />
+    </a>
+</div>
+
       <h1 className={styles.title}>Gerenciar Contrato de Aquisição</h1>
       <p className={styles.subtitle}>
         Insira seu ID e senha para acessar os detalhes do seu contrato de aquisição.

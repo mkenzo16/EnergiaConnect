@@ -31,7 +31,7 @@ const GestaoContratos = () => {
       title: "Visualizar Aquisição",
       description: "Confira os detalhes dos contratos de aquisição finalizados.",
       image: "/visualizar-aquisicao.jpg",
-      link: "/gerenciarContratos",
+      link: "/gerenciarAquisicao",
     },
   ];
 

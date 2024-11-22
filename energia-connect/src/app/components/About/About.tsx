@@ -2,7 +2,6 @@ import React from 'react';
 import styles from './About.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
-import IphoneSvg from '/public/iphone.svg';
 
 const About = () => {
   return (
@@ -20,7 +19,7 @@ const About = () => {
         </Link>
       </div>
       <div className={styles.imageContainer}>
-        <Image src={IphoneSvg} alt="iPhone com dados" width={400} height={400} />
+        <Image src='/iphone.svg' alt="iPhone com dados" width={400} height={400} />
       </div>
     </section>
   );

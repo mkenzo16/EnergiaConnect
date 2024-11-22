@@ -9,12 +9,46 @@ const Pagamento = () => {
     const [metodoPagamento, setMetodoPagamento] = useState("Pix");
     const [tipoCartao, setTipoCartao] = useState("Crédito");
     const [parcelas, setParcelas] = useState(1);
+    const [nomeTitular, setNomeTitular] = useState("");
+    const [numeroCartao, setNumeroCartao] = useState("");
+    const [validade, setValidade] = useState("");
+    const [cvv, setCvv] = useState("");
 
     useEffect(() => {
         const planoSelecionado = JSON.parse(localStorage.getItem("planoSelecionado") || "{}");
         setPlano(planoSelecionado.plano || "");
         setPreco(planoSelecionado.preco || 0);
     }, []);
+
+    const handleConfirmarPagamento = async () => {
+        const pagamento = {
+            plano,
+            preco,
+            metodoPagamento,
+            tipoCartao: metodoPagamento === "Cartão de Crédito/Débito" ? tipoCartao : null,
+            parcelas: metodoPagamento === "Cartão de Crédito/Débito" && tipoCartao === "Crédito" ? parcelas : null,
+            nomeTitular: metodoPagamento === "Cartão de Crédito/Débito" ? nomeTitular : null,
+            numeroCartao: metodoPagamento === "Cartão de Crédito/Débito" ? numeroCartao : null,
+            validade: metodoPagamento === "Cartão de Crédito/Débito" ? validade : null,
+            cvv: metodoPagamento === "Cartão de Crédito/Débito" ? cvv : null,
+        };
+
+        try {
+            const response = await fetch("http://localhost:8088/api/pagamentos", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(pagamento),
+            });
+
+            if (response.ok) {
+                alert("Pagamento realizado com sucesso!");
+            } else {
+                alert("Erro ao processar pagamento.");
+            }
+        } catch (error) {
+            console.error("Erro ao conectar com o backend:", error);
+        }
+    };
 
     const valorParcela = preco / parcelas;
 
@@ -62,21 +96,38 @@ const Pagamento = () => {
                         </div>
                     )}
                     <div className={styles.detalhesCartao}>
-                        <input type="text" placeholder="Nome do Titular" />
-                        <input type="text" placeholder="Número do Cartão" />
-                        <input type="text" placeholder="Validade (MM/AA)" />
-                        <input type="text" placeholder="CVV" />
+                        <input 
+                            type="text" 
+                            placeholder="Nome do Titular" 
+                            value={nomeTitular}
+                            onChange={(e) => setNomeTitular(e.target.value)}
+                        />
+                        <input 
+                            type="text" 
+                            placeholder="Número do Cartão" 
+                            value={numeroCartao}
+                            onChange={(e) => setNumeroCartao(e.target.value)}
+                        />
+                        <input 
+                            type="text" 
+                            placeholder="Validade (MM/AA)" 
+                            value={validade}
+                            onChange={(e) => setValidade(e.target.value)}
+                        />
+                        <input 
+                            type="text" 
+                            placeholder="CVV" 
+                            value={cvv}
+                            onChange={(e) => setCvv(e.target.value)}
+                        />
                     </div>
                 </div>
             )}
-            <button className={styles.botaoConfirmar}>Confirmar Pagamento</button>
+            <button className={styles.botaoConfirmar} onClick={handleConfirmarPagamento}>
+                Confirmar Pagamento
+            </button>
         </div>
     );
 };
 
-export default Pagamento;
-
-
-
-
-
+export default Pagamento;

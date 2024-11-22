@@ -41,11 +41,51 @@ const Cadastro = () => {
     setShowPassword((prev) => !prev);
   };
 
+  const handleCadastro = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+  
+    const form = event.target as HTMLFormElement;
+  
+    const payload = {
+      nome: (form[0] as HTMLInputElement).value,
+      dataNascimento: (form[1] as HTMLInputElement).value,
+      cpf: (form[2] as HTMLInputElement).value,
+      email: (form[3] as HTMLInputElement).value,
+      senha: (form[4] as HTMLInputElement).value,
+      endereco: {
+        cep: cep,
+        rua: endereco.rua,
+        bairro: endereco.bairro,
+        cidade: endereco.cidade,
+        estado: endereco.estado,
+        numero: (form[5] as HTMLInputElement).value,
+        complemento: (form[6] as HTMLInputElement).value || "",
+      },
+    };
+  
+    try {
+      const response = await fetch("http://localhost:9090/api/usuarios", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+  
+      if (response.ok) {
+        alert("Usuário cadastrado com sucesso!");
+      } else {
+        alert("Erro ao cadastrar usuário.");
+      }
+    } catch (error) {
+      console.error("Erro ao conectar com a API:", error);
+    }
+  };
+  
+
   return (
     <div className={styles.cadastroContainer}>
       <div className={styles.formContainer}>
         <h2 className={styles.title}>Cadastro</h2>
-        <form className={styles.form}>
+        <form className={styles.form} onSubmit={handleCadastro}>
           <div className={styles.personalInfo}>
             <h3>Informações Pessoais</h3>
             <input type="text" placeholder="Nome completo" className={styles.input} />
@@ -123,6 +163,7 @@ const Cadastro = () => {
 };
 
 export default Cadastro;
+
 
 
 

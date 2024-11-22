@@ -3,6 +3,16 @@
 import React from 'react';
 import styles from './Planos.module.css';
 
+const handleSelection = (plano: string, preco: string) => {
+    const precoNumerico = parseFloat(preco.replace('R$', '').replace(',', '.').replace(/\/.*/, '').trim());
+
+    localStorage.setItem(
+        "planoSelecionado",
+        JSON.stringify({ plano, preco: precoNumerico })
+    );
+    window.location.href = "/pagamento"; 
+};
+
 const planos = [
     {
         tipo: 'Aluguel',
@@ -35,21 +45,21 @@ const planos = [
         planos: [
             {
                 nome: 'Cota Essencial',
-                preco: 'R$ 3.000,00',
+                preco: 'R$ 3000,00',
                 energia: '1.000 kWh/ano',
                 descricao: 'Energia vitalícia para pequenas residências.',
                 background: '/aquisicao-basico.avif',
             },
             {
                 nome: 'Cota Avançada',
-                preco: 'R$ 6.500,00',
+                preco: 'R$ 6500,00',
                 energia: '2.500 kWh/ano',
                 descricao: 'Ótima escolha para consumo moderado.',
                 background: '/aquisicao-padrao.png',
             },
             {
                 nome: 'Cota Completa',
-                preco: 'R$ 12.000,00',
+                preco: 'R$ 12000,00',
                 energia: '5.000 kWh/ano',
                 descricao: 'Energia de sobra para grandes famílias.',
                 background: '/aquisicao.jpg',
@@ -84,7 +94,12 @@ const Planos = () => {
                                     <p className={styles.preco}>{plano.preco}</p>
                                     <p className={styles.energia}>Fornece: {plano.energia}</p>
                                     <p className={styles.descricao}>{plano.descricao}</p>
-                                    <button className={styles.botao}>Selecionar</button>
+                                    <button
+                                        className={styles.botao}
+                                        onClick={() => handleSelection(plano.nome, plano.preco)}
+                                    >
+                                        Selecionar
+                                    </button>
                                 </div>
                             </div>
                         ))}
@@ -96,4 +111,6 @@ const Planos = () => {
 };
 
 export default Planos;
+
+
 

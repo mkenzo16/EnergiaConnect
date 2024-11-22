@@ -1,0 +1,183 @@
+.container {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo {
+    font-size: 2.5rem;
+    color: #00d4ff;
+    margin-bottom: 20px;
+}
+
+.resumo {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.resumo h2 {
+    font-size: 1.5rem;
+    color: #ffa500;
+    margin-bottom: 10px;
+}
+
+.resumo p {
+    font-size: 1.1rem;
+    margin: 5px 0;
+}
+
+.metodo {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.metodo h2 {
+    font-size: 1.3rem;
+    color: #ffa500;
+    margin-bottom: 10px;
+}
+
+.select {
+    background-color: #2b2b2b;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.select:focus {
+    outline: none;
+    box-shadow: 0px 0px 5px #00d4ff;
+}
+
+.cartao select {
+    background-color: #2b2b2b;
+    color: #ffffff;
+    border: 1px solid #ffa500;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.cartao select:focus {
+    outline: none;
+    box-shadow: 0px 0px 5px #ffa500;
+}
+
+.cartao h2 {
+    font-size: 1.3rem;
+    color: #ffa500;
+    margin-bottom: 10px;
+}
+
+.parcelas {
+    margin-top: 20px;
+}
+
+.parcelas h2 {
+    font-size: 1.2rem;
+    color: #ffa500;
+    margin-bottom: 10px;
+}
+
+.parcelas select {
+    background-color: #2b2b2b;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.parcelas select:focus {
+    outline: none;
+    box-shadow: 0px 0px 5px #00d4ff;
+}
+
+.detalhesCartao {
+    margin-top: 20px;
+}
+
+.detalhesCartao input {
+    background-color: #2b2b2b;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+    font-size: 1rem;
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.detalhesCartao input::placeholder {
+    color: #a0a0a0;
+}
+
+.detalhesCartao input:focus {
+    outline: none;
+    box-shadow: 0px 0px 5px #00d4ff;
+}
+
+.botaoConfirmar {
+    background-color: #00d4ff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.botaoConfirmar:hover {
+    background-color: #007ba7;
+}
+
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 2rem;
+    }
+
+    .resumo, .metodo, .cartao, .parcelas {
+        width: 90%;
+    }
+
+    .botaoConfirmar {
+        width: 90%;
+    }
+}
+
+  

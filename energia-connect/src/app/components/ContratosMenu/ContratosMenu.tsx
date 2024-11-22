@@ -8,23 +8,30 @@ const GestaoContratos = () => {
     {
       id: 1,
       title: "Gerar Contrato",
-      description: "Crie um novo contrato para aluguel ou aquisição de energia de maneira simples.",
+      description: "Crie um novo contrato para aluguel de energia de maneira simples.",
       image: "/gerar-contrato.jpg",
-      link: "/gerar-contrato",
+      link: "/contratos",
     },
     {
       id: 2,
       title: "Gerenciar Contrato",
       description: "Visualize e gerencie contratos já existentes, incluindo cancelamento e alterações.",
       image: "/gerenciar-contrato.jpg",
-      link: "/gerenciar-contrato",
+      link: "/gerenciarContratos",
     },
     {
       id: 3,
+      title: "Contrato Aquisição",
+      description: "Crie agora um novo contrato para aquisição de uma cota de energia solar vitalício.",
+      image: "/aquisicao-contrato.jpg",
+      link: "/contratoAquisicao",
+    },
+    {
+      id: 4,
       title: "Visualizar Aquisição",
       description: "Confira os detalhes dos contratos de aquisição finalizados.",
       image: "/visualizar-aquisicao.jpg",
-      link: "/visualizar-aquisicao",
+      link: "/gerenciarContratos",
     },
   ];
 

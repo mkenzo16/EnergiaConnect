@@ -1,0 +1,109 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #1a1a1a, #333333);
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #f4f4f4;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #bfbfbf;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 800px;
+    width: 100%;
+    background: #444444;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 48%;
+}
+
+.inputGroup label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.inputGroup input,
+.inputGroup select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #666666;
+    background: #555555;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.radioGroup {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.radioGroup label {
+    font-size: 1rem;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.radioGroup input {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.buttonContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    background: #007bff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+
+.footerText {
+    font-size: 0.9rem;
+    color: #cccccc;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 1.5;
+    max-width: 800px;
+}

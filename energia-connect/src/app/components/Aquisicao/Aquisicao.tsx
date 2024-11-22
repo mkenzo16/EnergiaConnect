@@ -1,13 +1,14 @@
 "use client";
 
 import React, { useState } from "react";
-import styles from "./Contratos.module.css";
+import styles from "./Aquisicao.module.css";
 
-const GerarContrato = () => {
+const GerarContratoAquisicao = () => {
   const [nome, setNome] = useState("");
   const [id, setId] = useState("");
   const [senha, setSenha] = useState("");
-  const [tipoContrato, setTipoContrato] = useState("Plano Essencial");
+  const [tipoCota, setTipoCota] = useState("Cota Essencial");
+  const [quantidadeParcelas, setQuantidadeParcelas] = useState(1);
   const [status, setStatus] = useState("Ativo");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -17,23 +18,25 @@ const GerarContrato = () => {
       nome,
       id,
       senha,
-      tipoContrato,
+      tipoCota,
+      quantidadeParcelas,
       status,
     };
 
     try {
-      const response = await fetch("http://localhost:9090/api/contratos", {
+      const response = await fetch("http://localhost:9090/api/contratos-aquisicao", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(contrato),
       });
 
       if (response.ok) {
-        alert("Contrato gerado com sucesso!");
+        alert("Contrato de aquisição gerado com sucesso!");
         setNome("");
         setId("");
         setSenha("");
-        setTipoContrato("Plano Essencial");
+        setTipoCota("Cota Essencial");
+        setQuantidadeParcelas(1);
         setStatus("Ativo");
       } else {
         alert("Erro ao gerar contrato. Verifique os dados e tente novamente.");
@@ -46,9 +49,9 @@ const GerarContrato = () => {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Gerar Contrato</h1>
+      <h1 className={styles.title}>Gerar Contrato de Aquisição</h1>
       <p className={styles.subtitle}>
-        Preencha as informações abaixo para gerar um contrato de aluguel. Escolha o plano mais adequado às suas necessidades e defina o status inicial do contrato.
+        Preencha as informações abaixo para gerar um contrato de aquisição. Escolha a cota desejada e o número de parcelas.
       </p>
       <form className={styles.form} onSubmit={handleSubmit}>
         <div className={styles.inputGroup}>
@@ -63,14 +66,14 @@ const GerarContrato = () => {
           />
         </div>
         <div className={styles.inputGroup}>
-          <label htmlFor="id">ID (máx. 5 dígitos)</label>
+          <label htmlFor="id">ID (8 dígitos)</label>
           <input
             type="text"
             id="id"
             value={id}
             onChange={(e) => setId(e.target.value)}
-            placeholder="Ex: 12345"
-            maxLength={5}
+            placeholder="Ex: 12345678"
+            maxLength={8}
             required
           />
         </div>
@@ -86,17 +89,29 @@ const GerarContrato = () => {
           />
         </div>
         <div className={styles.inputGroup}>
-          <label htmlFor="tipoContrato">Tipo de Contrato</label>
+          <label htmlFor="tipoCota">Tipo de Cota</label>
           <select
-            id="tipoContrato"
-            value={tipoContrato}
-            onChange={(e) => setTipoContrato(e.target.value)}
+            id="tipoCota"
+            value={tipoCota}
+            onChange={(e) => setTipoCota(e.target.value)}
             required
           >
-            <option value="Plano Essencial">Plano Essencial</option>
-            <option value="Plano Familiar">Plano Familiar</option>
-            <option value="Plano Completo">Plano Completo</option>
+            <option value="Cota Essencial">Cota Essencial</option>
+            <option value="Cota Avançada">Cota Avançada</option>
+            <option value="Cota Completa">Cota Completa</option>
           </select>
+        </div>
+        <div className={styles.inputGroup}>
+          <label htmlFor="quantidadeParcelas">Quantidade de Parcelas (até 24x)</label>
+          <input
+            type="number"
+            id="quantidadeParcelas"
+            value={quantidadeParcelas}
+            onChange={(e) => setQuantidadeParcelas(Number(e.target.value))}
+            min={1}
+            max={24}
+            required
+          />
         </div>
         <div className={styles.radioGroup}>
           <label>
@@ -143,6 +158,4 @@ const GerarContrato = () => {
   );
 };
 
-export default GerarContrato;
-
-
+export default GerarContratoAquisicao;
